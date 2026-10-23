@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+
+    <title>2Q SW 1 SSC CLUB CHECKER</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            min-height:100vh;
+            background:radial-gradient(circle,#420000 0%,#0b1020 45%,#000000 100%);
+            color:white;
+            font-family:'Rajdhani',sans-serif;
+            text-align:center;
+        }
+
+        header{
+            padding-top:30px;
+        }
+
+        .logo{
+            width:90px;
+            height:90px;
+            margin:auto;
+            border-radius:50%;
+            background:radial-gradient(circle,#c8ffff,#41d1ff);
+            border:4px solid gold;
+            box-shadow:0 0 25px cyan;
+        }
+
+        h1{
+            font-family:'Orbitron',sans-serif;
+            color:#ffb300;
+            margin-top:20px;
+            font-size:2.3rem;
+            text-shadow:0 0 10px orange;
+        }
+
+        p{
+            max-width:700px;
+            margin:10px auto 30px;
+            color:#d6d6d6;
+            padding:0 20px;
+            font-size:18px;
+        }
+
+        main{
+            width:90%;
+            max-width:500px;
+            margin:auto;
+            background:#151b2c;
+            border:2px solid gold;
+            border-top:4px solid crimson;
+            border-radius:15px;
+            padding:30px;
+        }
+
+        input[type="text"]{
+            width:100%;
+            padding:15px;
+            margin-bottom:15px;
+            font-size:18px;
+            border-radius:8px;
+            border:1px solid #444;
+            background:#050912;
+            color:white;
+        }
+
+        input[type="text"]:focus{
+            outline:none;
+            border-color:gold;
+            box-shadow:0 0 10px gold;
+        }
+
+        input[type="button"]{
+            width:100%;
+            padding:15px;
+            font-size:20px;
+            font-weight:bold;
+            color:#ffd54f;
+            background:linear-gradient(#c8002f,#85001f);
+            border:2px solid gold;
+            border-radius:8px;
+            cursor:pointer;
+            transition:.3s;
+        }
+
+        input[type="button"]:hover{
+            transform:scale(1.02);
+        }
+
+        #result{
+            display:none;
+            margin-top:20px;
+            padding:20px;
+            border-radius:12px;
+            color:white;
+            font-size:20px;
+            box-shadow:0 0 15px rgba(0,255,255,.4);
+            animation:pop .4s ease;
+        }
+
+        @keyframes pop{
+            from{
+                opacity:0;
+                transform:scale(.8);
+            }
+            to{
+                opacity:1;
+                transform:scale(1);
+            }
+        }
+
+        footer{
+            margin-top:40px;
+            padding:15px;
+            background:#9b0026;
+            border-top:2px solid gold;
+            color:#ddd;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo"></div>
+
+        <h1>SOCIAL SCIENCES CLUB</h1>
+
+        <p>
+            This club offers a wide range of opportunities, especially for
+            students interested in politics, economics, and social discussions.
+        </p>
+
+    </header>
+
+    <main>
+
+        <form>
+
+            <input
+                type="text"
+                id="first_name"
+                placeholder="Enter your First Name">
+
+            <input
+                type="text"
+                id="last_name"
+                placeholder="Enter your Last Name">
+
+            <input
+                type="button"
+                py-click="candidate_checker"
+                value="ENTER">
+
+        </form>
+
+        <!-- Notification Box -->
+        <div id="result"></div>
+
+    </main>
+
+    <footer>
+        © 2026 Social Sciences Club • Seatwork 1 • 2nd Quarter
+    </footer>
+
+    <py-script src="main.py"></py-script>
+
+</body>
+</html>
